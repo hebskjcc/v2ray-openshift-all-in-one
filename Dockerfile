@@ -7,6 +7,7 @@ ENV CLIENT_SECURITY aes-128-cfb
 ADD conf/nginx.conf /etc/nginx/
 ADD conf/default.conf /etc/nginx/conf.d/
 ADD v2ray /usr/local/bin/
+ADD v2ctl /usr/local/bin/
 ADD entrypoint.sh /etc/
 
 RUN apt-get update \
@@ -19,6 +20,7 @@ RUN apt-get update \
 	&& mkdir /var/log/v2ray \
 	&& mkdir /etc/v2ray \
 	&& chmod 777 /usr/local/bin/v2ray \
+	&& chmod 777 /usr/local/bin/v2ctl \
 	&& chmod -R 777 /var/log/v2ray \
 	&& chmod -R 777 /etc/v2ray \
 	&& chmod 777 /etc/entrypoint.sh \
