@@ -19,3 +19,7 @@ A v2ray docker image work with nginx which supposes php for openshift v3.
 
 - path to v2ray: https://your.domain/ws/
 - path to websites: /usr/share/nginx/html/
+
+
+
+
