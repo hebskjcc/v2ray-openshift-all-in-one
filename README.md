@@ -11,7 +11,7 @@ A v2ray docker image work with nginx which supposes php for openshift v3.
 - add environment variables to edit optional setting
   - CLIENT_ID (default 00000000-0000-0000-0000-000000000000)
   - CLIENT_ALTERID (default 64)
-  - CLIENT_SECURITY (default aes-128-gcm)
+  - CLIENT_SECURITY (default aes-128-cfb)
 - don't need custom domain and ssl certificate
 - only cost 1 pods
 
@@ -19,3 +19,6 @@ A v2ray docker image work with nginx which supposes php for openshift v3.
 
 - path to v2ray: https://your.domain/ws/
 - path to websites: /usr/share/nginx/html/
+
+
+
