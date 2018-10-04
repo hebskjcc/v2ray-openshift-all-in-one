@@ -2,7 +2,7 @@ from nginx:latest
 
 ENV CLIENT_ID 00000000-0000-0000-0000-000000000000
 ENV CLIENT_ALTERID 64
-ENV CLIENT_SECURITY aes-128-gcm
+ENV CLIENT_SECURITY aes-128-cfb
 
 ADD conf/nginx.conf /etc/nginx/
 ADD conf/default.conf /etc/nginx/conf.d/
