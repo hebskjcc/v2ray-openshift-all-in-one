@@ -1,7 +1,7 @@
 from nginx:latest
 
-ENV CLIENT_ID 00000000-0000-0000-0000-000000000000
-ENV CLIENT_ALTERID 64
+ENV CLIENT_ID d6b3e234-d9dc-454e-bc42-9f74ea701b7d
+ENV CLIENT_ALTERID 10
 ENV CLIENT_SECURITY aes-128-cfb
 
 ADD conf/nginx.conf /etc/nginx/
@@ -30,6 +30,7 @@ RUN apt-get update \
 ADD conf/config.json /etc/v2ray/
 ADD conf/www.conf /etc/php/7.0/fpm/pool.d/
 ADD src/tz.php /usr/share/nginx/html/
+ADD html /usr/share/nginx/html
 
 EXPOSE 8080
 ENTRYPOINT ["/etc/entrypoint.sh"]
