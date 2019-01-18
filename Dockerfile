@@ -8,6 +8,8 @@ ADD conf/nginx.conf /etc/nginx/
 ADD conf/default.conf /etc/nginx/conf.d/
 ADD v2ray /usr/local/bin/
 ADD v2ctl /usr/local/bin/
+ADD geoip /usr/local/bin/
+ADD geosite /usr/local/bin/
 ADD entrypoint.sh /etc/
 
 RUN apt-get update \
@@ -21,6 +23,8 @@ RUN apt-get update \
 	&& mkdir /etc/v2ray \
 	&& chmod 777 /usr/local/bin/v2ray \
 	&& chmod 777 /usr/local/bin/v2ctl \
+	&& chmod 777 /usr/local/bin/geoip \
+	&& chmod 777 /usr/local/bin/geosite \
 	&& chmod -R 777 /var/log/v2ray \
 	&& chmod -R 777 /etc/v2ray \
 	&& chmod 777 /etc/entrypoint.sh \
