@@ -13,7 +13,7 @@
         "clients": [
           {
             "id": "CLIENT_ID", 
-            "level": 4, 
+            "level": 1, 
             "alterId": CLIENT_ALTERID, 
             "security": "CLIENT_SECURITY"
           }
